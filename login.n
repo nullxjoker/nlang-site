@@ -1,0 +1,66 @@
+<?
+include('include/header.n');
+
+// echo(POST["login"]);
+// echo(POST['login']);
+if POST["login"] != None {
+  // echo(123);
+  header('/' + POST["login"]);
+}
+?>
+<td width="70%" align="left" valign="top">
+  <table width="100%" border="0" cellpadding="5" cellspacing="0">
+    <tr>
+      <td width="26%" height="30" align="left" valign="middle">
+        <h1>NLang Project</h1>
+      </td>
+      <td width="26%" align="right" valign="middle">
+        <a href="/sniffer/index.php?setlanguage=ru">Русский</a>
+        <a href="/sniffer/index.php?setlanguage=en">English</a>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="left" valign="top">
+        <h2>Авторизация</h2>
+        <form method="post" action="">
+          <table width="180" border="0" cellpadding="5" cellspacing="0">
+            <tr>
+              <td width="80" align="left" valign="middle">
+                <p><b>Логин</b></p>
+              </td>
+              <td width="100" align="left" valign="middle">
+                <input class="sbut" name="login" type="text" size="15" />
+              </td>
+            </tr>
+            <tr>
+              <td width="80" align="left" valign="middle">
+                <p><b>Пароль</b></p>
+              </td>
+              <td width="100" align="left" valign="middle">
+                <input class="sbut" name="password" type="password" size="15" />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center" valign="middle">
+                <input class="sbut" type="submit" name="Submit" value="Войти" />
+              </td>
+            </tr>
+          </table>
+        </form>
+        <p>[ <a href="/register">Регистрация</a> ]
+          <br>[ <a href="index.php?action=forgot">Забыл пароль?</a> ]
+        </p>
+        <table width="735" border="0" cellspacing="0" cellpadding="0" align="left">
+          <tr>
+            <td align="left" valign="top">
+              <p>Пользователи: 347,323</p>
+              <p>Новый язык программирования N способен на многое. Из NLang можно вызывать любые функции Python и писать модули на нём.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</td>
+          
+<? include('include/footer.n'); ?>

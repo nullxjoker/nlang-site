@@ -1,0 +1,6 @@
+<?
+include('config.n');
+pyimport('MySQLdb');
+Python con = MySQLdb.connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+Python cur = con.cursor();
+?>
