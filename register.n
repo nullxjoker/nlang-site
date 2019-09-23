@@ -1,4 +1,16 @@
-<? include('include/header.n'); ?>
+<?
+include('include/header.n');
+if POST['login'] != None {
+  sql.execute('SELECT * from users WHERE `login` = "' + POST['login'] + '"');
+  if len(sql.fetchall()) == 0 {
+    String password = sha1(POST['password']);
+    sql.execute('INSERT into users (`login`, `password`) VALUES ("'+POST['login']+'", "'+password+'")');
+    conn.commit();
+    redirect('/?message=Пользователь создан!');
+  }
+}
+
+?>
 
 <td width="70%" align="left" valign="top">
   <table width="100%" border="0" cellpadding="5" cellspacing="0">
@@ -21,7 +33,7 @@
                 <p><b>Логин</b></p>
               </td>
               <td width="100" align="left" valign="middle">
-                <input class="sbut" name="name" type="text" size="15" />
+                <input class="sbut" name="login" type="text" size="15" />
               </td>
             </tr>
             <tr>
@@ -29,7 +41,7 @@
                 <p><b>Пароль</b></p>
               </td>
               <td width="100" align="left" valign="middle">
-                <input class="sbut" name="pass" type="password" size="15" />
+                <input class="sbut" name="password" type="password" size="15" />
               </td>
             </tr>
             <tr>

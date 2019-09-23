@@ -1,13 +1,27 @@
 <?
 include('include/header.n');
 
-// echo(POST["login"]);
-// echo(POST['login']);
 if POST["login"] != None {
-  // echo(123);
-  header('/' + POST["login"]);
+  
+  String login = POST['login'];
+
+  String password = sha1(POST['password']);
+  sql.execute('SELECT * from `users` WHERE `login` = "' + login + '"');
+  Dict user = sql.fetchone();
+  if user['password'] == password {
+    session('login', login);
+  }
+}
+
+if GET['message'] != None {
+  echo(GET['message']);
+}
+
+if logged () {
+  redirect('/private');
 }
 ?>
+
 <td width="70%" align="left" valign="top">
   <table width="100%" border="0" cellpadding="5" cellspacing="0">
     <tr>

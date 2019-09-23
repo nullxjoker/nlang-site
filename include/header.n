@@ -1,5 +1,7 @@
 <?
 include('engine/db.n');
+
+
 ?>
 
 <!DOCTYPE html>
@@ -71,13 +73,12 @@ include('engine/db.n');
             </tr>
             <tr>
               <td align="right" height="28" nowrap="nowrap">
-                <div style="font-family: Arial, Helvetica, sans-serif; font-size:10px; color:#FFFFFF; margin:2px 35px 0px 0px; padding:0">
-                  <a class="mlink" href="/">Форум</a>
-                  <script language="javascript">
-                    if ("https:" != document.location.protocol) {
-                        document.write('&nbsp;<span style="font-size: 10px;font-weight:normal">[ <a class="mlink" href="/">ssl</a> ]</span>');
-                    }
-                  </script>&nbsp;&nbsp;&nbsp;<a class="mlink" href="/text/">Статьи</a>&nbsp;&nbsp;&nbsp;<a class="mlink" href="/news/">Новости</a>&nbsp;&nbsp;&nbsp;<a class="mlink" href="/downloads.php">Файлы</a>&nbsp;&nbsp;&nbsp;<a class="mlink" href="/bugs/">Bugtraq</a>&nbsp;&nbsp;&nbsp;<a class="mlink" href="/sniffer/">Сниффер</a>&nbsp;&nbsp;&nbsp;<a class="mlink" href="/friends/">Друзья</a>&nbsp;&nbsp;&nbsp;<a class="mlink" href="/about/">О Клубе</a>
+                <div style="font-family: Arial, Helvetica, sans-serif; font-size:10px; color:#FFFFFF; margin:2px 35px 0px 0px; padding:0">    
+                  <? if logged() == True: ?>
+                    <? if user['admin'] == 1: ?>
+                      <a class="mlink" href="/admin">Админка</a>
+                    <?;?>
+                  <?;?>
                 </div>
                 </div>
               </td>

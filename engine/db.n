@@ -1,6 +1,16 @@
 <?
 include('config.n');
 pyimport('MySQLdb');
-Python con = MySQLdb.connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-Python cur = con.cursor();
+pyimport('MySQLdb', ['cursors']);
+
+Python conn = MySQLdb.connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, cursorclass=MySQLdb.cursors.DictCursor);
+Python sql = conn.cursor();
+
+Boolean logged () {
+  return (session('login') != None);
+}
+if logged () {
+  sql.execute('SELECT * from users WHERE login = "' + session('login') + '"');
+  Dict user = sql.fetchone();
+}
 ?>

@@ -1,0 +1,12 @@
+<?
+include('engine/db.n');
+if !logged() redirect('/');
+
+if !(user['admin'] == 1) {
+  echo('Вы не имеете прав доступа к этой области.');
+  die();
+}
+sql.close();
+conn.close();
+?>
+123
