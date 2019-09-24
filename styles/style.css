@@ -1,7 +1,7 @@
 body {
 	background-color: #fff;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
+	font-size: 15px;
 	font-weight: 400;
 	margin: 0;
 	padding: 0
@@ -9,7 +9,7 @@ body {
 
 a {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 13px
+	font-size: 15px
 }
 
 a:link {
@@ -38,7 +38,7 @@ a:hover {
 
 a.mlink {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px
+	font-size: 16px
 }
 
 a.mlink:link {
@@ -101,7 +101,7 @@ a.mlink1:hover {
 
 a.minilink {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 14px
+	font-size: 16px
 }
 
 a.minilink:link {
@@ -160,14 +160,14 @@ a.headerlink:hover {
 
 h1 {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 18px;
+	font-size: 22px;
 	color: #000;
 	font-weight: 400
 }
 
 h2 {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	color: #3f3f3f;
 	font-weight: 700;
 	border-bottom: #000 1px dotted
@@ -182,7 +182,7 @@ h3 {
 
 h4 {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	color: #3f3f3f;
 	font-weight: 700;
 	padding-left: 10px;
@@ -194,23 +194,23 @@ h4 {
 
 p {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
+	font-size: 15px;
 	font-weight: 400
 }
 
 p.mintext {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 14px
+	font-size: 16px
 }
 
 span.mintxt {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 14px
+	font-size: 16px
 }
 
 p.mintextw {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	color: #fff
 }
 
@@ -233,15 +233,16 @@ li {
 input.sbut {
 	background-color: #fff;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 14px
+	font-size: 16px
 }
 
 
 textarea.sbuttext {
 	background-color: #fff;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 14px
+	font-size: 16px
 }
+
 
 ul.sul {
 	margin: 0;
@@ -266,7 +267,7 @@ div.stext {
 
 div.minitext {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 14px
+	font-size: 16px
 }
 
 ul.slist {
