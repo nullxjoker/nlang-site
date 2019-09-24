@@ -29,8 +29,7 @@ if logged () {
         <h1>NLang Project</h1>
       </td>
       <td width="26%" align="right" valign="middle">
-        <a href="/sniffer/index.php?setlanguage=ru">Русский</a>
-        <a href="/sniffer/index.php?setlanguage=en">English</a>
+      
       </td>
     </tr>
     <tr>
@@ -77,4 +76,4 @@ if logged () {
   </table>
 </td>
           
-<? include('include/footer.n'); ?>
+<? //include('include/footer.n'); ?>

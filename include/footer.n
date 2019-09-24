@@ -1,40 +1,40 @@
-<td width="14%" align="left" valign="top">
-            <h2>Последнее на Сайте</h2>
-            <p class="mintext"><b>Новости</b>
-            <ul>
-              <li><a class="minilink" href="/news/index.php?nid=882">В Беларуси задержан участник международной хакерской группировки Andromeda</a></li>
-              <li><a class="minilink" href="/news/index.php?nid=881">Прекращена деятельность одной из крупнейших в мире вредоносных кампаний</a></li>
-              <li><a class="minilink" href="/news/index.php?nid=880">Всемирный день информации отмечается 26 ноября</a></li>
-              <li><a class="minilink" href="/news/index.php?nid=879">Вирусы обходят защиту в Google Play</a></li>
-              <li><a class="minilink" href="/news/index.php?nid=878">В Microsoft Office исправлена критическая уязвимость 17-летней давности</a></li>
-            </ul>
-            <p class="mintext"><b>Статьи</b>
-            <ul>
-              <li><a class="minilink" href="/text/index.php?mid=1002">Популярные и не очень способы взлома Jabber (JID)</a></li>
-              <li><a class="minilink" href="/text/index.php?mid=960">Создание спам-ботов на С#</a></li>
-              <li><a class="minilink" href="/text/index.php?mid=950">Написание malware под Android. Чего не нужно делать?</a></li>
-              <li><a class="minilink" href="/text/index.php?mid=900">Написание ddos-бота: особенности и подводные камни</a></li>
-              <li><a class="minilink" href="/text/index.php?mid=811">Создание расширения для Google Chrome (часть вторая)</a></li>
-            </ul>
-            <p class="mintext"><b>Bugtraq</b>
-            <ul>
-              <li><a class="minilink" href="/bugs/index.php?nid=547">Обход ограничений безопасности в Wordpress</a></li>
-              <li><a class="minilink" href="/bugs/index.php?nid=546">Межсайтовый скриптинг в WordPress</a></li>
-              <li><a class="minilink" href="/bugs/index.php?nid=543">Выполнение произвольного кода в Microsoft Internet Explorer</a></li>
-              <li><a class="minilink" href="/bugs/index.php?nid=542">Уязвимость при обработке SMB транзакций в Microsoft Windows</a></li>
-              <li><a class="minilink" href="/bugs/index.php?nid=541">SQL-инъекция в Rash CMS</a></li>
-            </ul>
-            <p class="mintext"><b>Файлы</b>
-            <ul>
-              <li><a class="minilink" href="/downloads.php?do=file&id=3508">Литература по ARM архитектуре</a></li>
-              <li><a class="minilink" href="/downloads.php?do=file&id=3507">Учебная литература по техническому английскому</a></li>
-              <li><a class="minilink" href="/downloads.php?do=file&id=3506">Учебная литература по ЯП PHP</a></li>
-              <li><a class="minilink" href="/downloads.php?do=file&id=3505">Учебная литература по ЯП Perl</a></li>
-              <li><a class="minilink" href="/downloads.php?do=file&id=3504">Учебная литература по NodeJS</a></li>
-            </ul>
-          </td>
-        </tr>
-      </table>
+  <td width="14%" align="left" valign="top">
+      <h2>Последнее на Сайте</h2>
+      <p class="mintext"><b>Новости</b>
+      <ul>
+        <li><a class="minilink" href="/news/index.php?nid=882">В Беларуси задержан участник международной хакерской группировки Andromeda</a></li>
+        <li><a class="minilink" href="/news/index.php?nid=881">Прекращена деятельность одной из крупнейших в мире вредоносных кампаний</a></li>
+        <li><a class="minilink" href="/news/index.php?nid=880">Всемирный день информации отмечается 26 ноября</a></li>
+        <li><a class="minilink" href="/news/index.php?nid=879">Вирусы обходят защиту в Google Play</a></li>
+        <li><a class="minilink" href="/news/index.php?nid=878">В Microsoft Office исправлена критическая уязвимость 17-летней давности</a></li>
+      </ul>
+      <p class="mintext"><b>Статьи</b>
+      <ul>
+        <li><a class="minilink" href="/text/index.php?mid=1002">Популярные и не очень способы взлома Jabber (JID)</a></li>
+        <li><a class="minilink" href="/text/index.php?mid=960">Создание спам-ботов на С#</a></li>
+        <li><a class="minilink" href="/text/index.php?mid=950">Написание malware под Android. Чего не нужно делать?</a></li>
+        <li><a class="minilink" href="/text/index.php?mid=900">Написание ddos-бота: особенности и подводные камни</a></li>
+        <li><a class="minilink" href="/text/index.php?mid=811">Создание расширения для Google Chrome (часть вторая)</a></li>
+      </ul>
+      <p class="mintext"><b>Bugtraq</b>
+      <ul>
+        <li><a class="minilink" href="/bugs/index.php?nid=547">Обход ограничений безопасности в Wordpress</a></li>
+        <li><a class="minilink" href="/bugs/index.php?nid=546">Межсайтовый скриптинг в WordPress</a></li>
+        <li><a class="minilink" href="/bugs/index.php?nid=543">Выполнение произвольного кода в Microsoft Internet Explorer</a></li>
+        <li><a class="minilink" href="/bugs/index.php?nid=542">Уязвимость при обработке SMB транзакций в Microsoft Windows</a></li>
+        <li><a class="minilink" href="/bugs/index.php?nid=541">SQL-инъекция в Rash CMS</a></li>
+      </ul>
+      <p class="mintext"><b>Файлы</b>
+      <ul>
+        <li><a class="minilink" href="/downloads.php?do=file&id=3508">Литература по ARM архитектуре</a></li>
+        <li><a class="minilink" href="/downloads.php?do=file&id=3507">Учебная литература по техническому английскому</a></li>
+        <li><a class="minilink" href="/downloads.php?do=file&id=3506">Учебная литература по ЯП PHP</a></li>
+        <li><a class="minilink" href="/downloads.php?do=file&id=3505">Учебная литература по ЯП Perl</a></li>
+        <li><a class="minilink" href="/downloads.php?do=file&id=3504">Учебная литература по NodeJS</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 <table style="border-top: #000000 1px dotted;" width="100%" align="center" cellpadding="2" cellspacing="2">
         <tr>
           <td width="68%" height="47" align="left" valign="top">
@@ -65,3 +65,7 @@
     </div>
   </body>
 </html>
+
+<?
+sql.close();
+conn.close();

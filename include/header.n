@@ -1,7 +1,6 @@
 <?
 include('engine/db.n');
 
-
 ?>
 
 <!DOCTYPE html>
@@ -10,6 +9,7 @@ include('engine/db.n');
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
     <script type="text/javascript" src="/clientscript/jquery-1.2.6.min.js"></script>
     <meta http-equiv="cache-control" content="no-store, no-cache, must-revalidate">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Мы создали революционный язык веб программирования. Все возможности python и удобство роутинга" />
     <title>NLang Project</title>
     <link href="/styles/style.css" rel="stylesheet" type="text/css">
@@ -56,28 +56,24 @@ include('engine/db.n');
     </script>
   </head>
   <body>
-    <table width="100%" height="181" border="0" align="center" cellpadding="0" cellspacing="0" style="margin:0px 0px 10px; 0px;padding:0">
+    <table width="100%" height="100" border="1" align="center" cellpadding="0" cellspacing="0" style="margin:0px 0px 10px; 0px;padding:0">
       <tr>
-        <td width="455" height="181" align="left">
-          <div style="position: relative;z-index: 3;margin: 0; padding: 0;">
-          <!-- <img src="/style/1hpc.png" border="0" width="455" height="181" style="display: inline-block; margin: 0px; padding: 0px;outline:0;"></div> -->
-          <div style="background:black;width:455px;height:181px"></div>
-        </td>
-        <td width="153" height="181" align="left">
-          <!-- <img src="/style/back_get.png" border="0" width="153" height="181" style="display: inline-block; margin: 0px; padding: 0px;outline:0;"></td> -->
-          <div style="background:black;width:153px;height:181px"></div>
-        <td height="181" align="right" valign="top" style="background:green; background-position:left; background-repeat:repeat-x">
+        <td height="100" align="left" valign="top" style="background:blue; background-position:left; background-repeat:repeat-x">
           <table width="401" border="0" cellpadding="0" cellspacing="0" style="margin:0;padding:0">
             <tr>
-              <td height="129">&nbsp;</td>
+              <td height="70">&nbsp;</td>
             </tr>
+  
             <tr>
-              <td align="right" height="28" nowrap="nowrap">
-                <div style="font-family: Arial, Helvetica, sans-serif; font-size:10px; color:#FFFFFF; margin:2px 35px 0px 0px; padding:0">    
+              <td align="left" height="28" nowrap="nowrap">
+                <div style="font-family: Arial, Helvetica, sans-serif; font-size:10px; color:#FFFFFF; margin:2px 25px 15px 23px; padding:0">    
                   <? if logged() == True: ?>
                     <? if user['admin'] == 1: ?>
-                      <a class="mlink" href="/admin">Админка</a>
+                      <a class="mlink" href="/admin">Админка</a>&nbsp;&nbsp;&nbsp;
                     <?;?>
+                    <a class="mlink" href="/private">Личный кабинет</a>&nbsp;&nbsp;
+                    <a class="mlink" href="/social-analytics">Социальный анализ</a>&nbsp;&nbsp;&nbsp;
+                    <a class="mlink" href="/exit">Выйти из аккаунта</a>
                   <?;?>
                 </div>
                 </div>
@@ -85,6 +81,16 @@ include('engine/db.n');
             </tr>
           </table>
         </td>
+        <td width="153" height="105" align="left">
+          <!-- <img src="/style/back_get.png" border="0" width="153" height="100" style="display: inline-block; margin: 0px; padding: 0px;outline:0;"></td> -->
+          <div style="background:white;width:153px;height:105px"></div>
+        </td>
+        <td width="455" height="105" align="left">
+          <div style="position: relative;z-index: 3;margin: 0; padding: 0;">
+          <!-- <img src="/style/1hpc.png" border="0" width="455" height="100" style="display: inline-block; margin: 0px; padding: 0px;outline:0;"></div> -->
+          <div style="background:red;width:455px;height:105px"></div>
+        </td>
+        
       </tr>
     </table>
     <div style="margin: 0px 2px 2px 2px; padding: 0px">
@@ -100,57 +106,21 @@ include('engine/db.n');
       <table width="100%" border="0" align="center" cellpadding="3" cellspacing="2">
         <tr>
           <td width="14%" align="left" valign="top">
-            <h2>Последнее на Форуме</h2>
+            <h2>Документация</h2>
+            <?
+            sql.execute('SELECT * from articles');
+            List articles = sql.fetchall();
+            ?>
             <ul>
-              <li><a class='minilink' href="/showthread.php?t=61590&p=523490#post523490" title="600 - Руб &#10004;&#65039;Идентификация Qiwi, Yandex, WebMoney, Цупис, Карты-Qiwi/Яндекс, Аккаунты, Биржи, Платежные системы, Задарма, Exmo, Skrill, Paysera!">600 - Руб &amp;#10004;&amp;#65039...</a> <font style="color:#707070" size='1'>ответ от Daenerys T <i>22/09 17:48</i>
-                </font>
+              <? for i, article : list(articles) : ?>
+              <li>
+                <a class='minilink' href="/article?id=<?=article['id']?>"><?=article['title']?></a>
               </li>
-              <li><a class='minilink' href="/showthread.php?t=58859&p=523488#post523488" title="FREE SOCKS4&amp;5 UPDATE DAILY!">FREE SOCKS4&amp;5 UPDATE DAILY!</a> <font style="color:#707070" size='1'>ответ от dichvusocks <i>22/09 15:30</i>
-                </font>
-              </li>
-              <li><a class='minilink' href="/showthread.php?t=60885&p=523487#post523487" title="[Vn5socks.net] Service Seller Socks Good">[Vn5socks.net] Service Se...</a> <font style="color:#707070" size='1'>ответ от vn5socks <i>22/09 15:30</i>
-                </font>
-              </li>
-              <li><a class='minilink' href="/showthread.php?t=59507&p=523486#post523486" title="{Tisocks.com} - Socks5 Proxy Service Cheap Socks5">{Tisocks.com} - Socks5 Pr...</a> <font style="color:#707070" size='1'>ответ от tisocks <i>22/09 15:11</i>
-                </font>
-              </li>
-              <li><a class='minilink' href="/showthread.php?t=58757&p=523485#post523485" title="[Shopsocks5.com] FREE SOCKS4&amp;5 UPDATE DAILY!">[Shopsocks5.com] FREE SOC...</a> <font style="color:#707070" size='1'>ответ от shopsocks5.com <i>22/09 15:11</i>
-                </font>
-              </li>
-              <li><a class='minilink' href="/showthread.php?t=61594&p=523484#post523484" title="Разработчики Bitcoin Core предложили отказаться от BIP70">Разработчики Bitcoin Core...</a> <font style="color:#707070" size='1'>ответ от Khan_official <i>22/09 15:09</i>
-                </font>
-              </li>
-              <li><a class='minilink' href="/showthread.php?t=60268&p=523483#post523483" title="Сканы, фото + снилс, селфи">Сканы, фото + снилс, селфи</a> <font style="color:#707070" size='1'>ответ от mxdor12 <i>22/09 11:56</i>
-                </font>
-              </li>
-              <li><a class='minilink' href="/showthread.php?t=61451&p=523482#post523482" title="Оффлайн-базы сигнатур ESET NOD32">Оффлайн-базы сигнатур ESE...</a> <font style="color:#707070" size='1'>ответ от userror <i>22/09 11:46</i>
-                </font>
-              </li>
-              <li><a class='minilink' href="/showthread.php?t=60146&p=523481#post523481" title="Создаём высококачественные копии сайтов и Landing Page на профессиональном уровне.">Создаём высококачественны...</a> <font style="color:#707070" size='1'>ответ от AvramLincoln <i>22/09 11:11</i>
-                </font>
-              </li>
-              <li><a class='minilink' href="/showthread.php?t=60806&p=523480#post523480" title="Installs Service, Продажа инсталлов">Installs Service, Продажа...</a> <font style="color:#707070" size='1'>ответ от Detroid <i>22/09 10:46</i>
-                </font>
-              </li>
-              <li><a class='minilink' href="/showthread.php?t=60875&p=523475#post523475" title="Продаётся Google Drive c облаком неограниченного объёма+в комплекте Microsoft One Drive 1TB+Office 365 (5 лицензий на 4 года).">Продаётся Google Drive c ...</a> <font style="color:#707070" size='1'>ответ от arturfix1 <i>22/09 09:00</i>
-                </font>
-              </li>
-              <li><a class='minilink' href="/showthread.php?t=59959&p=523473#post523473" title="Яндекс Директ и Гугл Эдвордс - настройка и ведение ваших кампаний по контекстной рекламе.">Яндекс Директ и Гугл Эдво...</a> <font style="color:#707070" size='1'>ответ от AvramLincoln <i>22/09 07:02</i>
-                </font>
-              </li>
-              <li><a class='minilink' href="/showthread.php?t=61593&p=523469#post523469" title="Продаем дешевые и качественные аккаунты брут(Brut)-Instagram-vk-facebook-ok.ru(однокласники).бАЗЫ ДЛЯ БРУТА">Продаем дешевые и качеств...</a> <font style="color:#707070" size='1'>ответ от frilanser_top <i>22/09 03:45</i>
-                </font>
-              </li>
-              <li><a class='minilink' href="/showthread.php?t=61592&p=523468#post523468" title="МОБИЛЬНЫЕ ПРОКСИ">МОБИЛЬНЫЕ ПРОКСИ</a> <font style="color:#707070" size='1'>ответ от hello-mobi <i>21/09 22:34</i>
-                </font>
-              </li>
-              <li><a class='minilink' href="/showthread.php?t=61497&p=523466#post523466" title="Online.help.free.hack@gmail.com - это профессиональные услуги взлома, ddos атак и многого другого"><span class="__cf_email__" data-cfemail="dc93b2b0b5b2b9f2b4b9b0acf2baaeb9b9f2b4bdbfb79cbbb1bdf2f2f2">[email&#160;protected]</span></a> <font style="color:#707070" size='1'>ответ от bitkoin <i>21/09 20:51</i>
-                </font>
-              </li>
+              <? ; ?>
             </ul>
             <h2>Контакты</h2>
             <p class="mintext">Связь с Администрацией
               <br>
-              <br>hpcteam1[@]gmail.com
+              <br>codemasterio[@]protonmail.com
             </p>
           </td>

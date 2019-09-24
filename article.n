@@ -1,33 +1,27 @@
 <?
 include('include/header.n');
-
-if !logged() {
-  redirect('/login');
-}
-
+pyimport('markdown2');
+sql.execute('SELECT * from articles WHERE `id` = "' + GET['id'] + '"');
+Dict article = sql.fetchone();
 ?>
-
 <td width="70%" align="left" valign="top">
   <table width="100%" border="0" cellpadding="5" cellspacing="0">
     <tr>
       <td width="26%" height="30" align="left" valign="middle">
-        <h1>Добро пожаловать в личный кабинет на сайте Nlang.ru</h1>
+        <h1>Документация языка Nlang</h1>
       </td>
       <td width="26%" align="right" valign="middle">
-        
+
       </td>
     </tr>
     <tr>
       <td colspan="2" align="left" valign="top">
-        <h2>Личная зона аккаунта <?=session('login')?></h2>
-        <p>Тут ты можешь изменять настройки своего аккаунта</p>
+        <h2><?=article['title']?></h2>
+        <p><?=markdown2.markdown(article['text'])?></p>
       </td>
     </tr>
   </table>
 </td>
-
 <?
-
 // include('include/footer.n');
-
 ?>

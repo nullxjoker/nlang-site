@@ -8,5 +8,6 @@ if !(user['admin'] == 1) {
 }
 sql.close();
 conn.close();
+
 ?>
 123
