@@ -7,6 +7,8 @@ if POST['login'] != None {
     sql.execute('INSERT into users (`login`, `password`) VALUES ("'+POST['login']+'", "'+password+'")');
     conn.commit();
     redirect('/?message=Пользователь создан!');
+  } else {
+    redirect('/?message=Пользователь уже существует!');
   }
 }
 
@@ -45,7 +47,7 @@ if POST['login'] != None {
             </tr>
             <tr>
               <td colspan="2" align="center" valign="middle">
-                <input class="sbut" type="submit" name="Submit" value="Войти" />
+                <input class="sbut" type="submit" name="Submit" value="Зарегистрироваться" />
               </td>
             </tr>
           </table>
@@ -54,7 +56,11 @@ if POST['login'] != None {
         <table width="735" border="0" cellspacing="0" cellpadding="0" align="left">
           <tr>
             <td align="left" valign="top">
-              <p>Пользователи: 347,323</p>
+              <?
+              Let users = sql.execute('SELECT COUNT(*) as count from users;');
+              users = sql.fetchall();
+              ?>
+              <p>Пользователи: <?=users[0]['count']?></p>
               <p>Новый язык программирования N способен на многое. Из NLang можно вызывать любые функции Python и писать модули на нём.</p>
             </td>
           </tr>

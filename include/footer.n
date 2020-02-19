@@ -1,4 +1,4 @@
-  <td width="14%" align="left" valign="top">
+  <!-- <td width="14%" align="left" valign="top">
       <h2>Последнее на Сайте</h2>
       <p class="mintext"><b>Новости</b>
       <ul>
@@ -44,10 +44,8 @@
             </p>
           </td>
           <td width="32%" align="right" valign="middle">
-            <!--LiveInternet counter-->
             <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
             <script type="text/javascript">
-              <!--
               document.write("<a href='http://www.liveinternet.ru/?hpc.name' " +
                       "target=_blank><img src='//counter.yadro.ru/hit?t15.6;r" +
                       escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :
@@ -57,12 +55,11 @@
                       "' alt='' title='LiveInternet: показано число просмотров за 24" +
                       " часа, посетителей за 24 часа и за сегодня' " +
                       "border='0' width='88' height='31'><\/a>")
-                  //-->
             </script>
           </td>
         </tr>
-      </table>
-    </div>
+      </table> -->
+    <!-- </div> -->
   </body>
 </html>
 

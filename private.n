@@ -4,6 +4,12 @@ include('include/header.n');
 if !logged() {
   redirect('/login');
 }
+class Test {
+  public static int GetTest () {
+    return 115;
+  }
+}
+
 
 ?>
 
@@ -28,6 +34,6 @@ if !logged() {
 
 <?
 
-// include('include/footer.n');
+include('include/footer.n');
 
 ?>

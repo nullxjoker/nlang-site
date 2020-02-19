@@ -3,6 +3,13 @@ include('include/header.n');
 pyimport('markdown2');
 sql.execute('SELECT * from articles WHERE `id` = "' + GET['id'] + '"');
 Dict article = sql.fetchone();
+
+class Test {
+  public void Test ():;
+  public static int z = 5;
+}
+
+Test test = new Test();
 ?>
 <td width="70%" align="left" valign="top">
   <table width="100%" border="0" cellpadding="5" cellspacing="0">
@@ -23,5 +30,5 @@ Dict article = sql.fetchone();
   </table>
 </td>
 <?
-// include('include/footer.n');
+include('include/footer.n');
 ?>

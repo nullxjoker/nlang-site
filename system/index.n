@@ -1,0 +1,24 @@
+<?
+include('include/header.n');
+?>
+  <td width="70%" align="left" valign="top">
+    <table width="100%" border="0" cellpadding="5" cellspacing="0">
+      <tr>
+        <td width="26%" height="30" align="left" valign="middle">
+          <h1>Отдел в разработке</h1>
+        </td>
+        <td width="26%" align="right" valign="middle">
+
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="left" valign="top">
+          <h2>Попробуйте позже</h2>
+          <p>Социальная аналитика находится в разработке. Попробуйте позже.</p>
+        </td>
+      </tr>
+    </table>
+  </td>
+<?
+include('include/footer.n');
+?>

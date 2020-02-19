@@ -3,11 +3,15 @@ include('include/header.n');
 
 if POST["login"] != None {
   
-  String login = POST['login'];
+  string login = POST['login'];
 
-  String password = sha1(POST['password']);
+  string password = sha1(POST['password']);
   sql.execute('SELECT * from `users` WHERE `login` = "' + login + '"');
   Dict user = sql.fetchone();
+  if user == None {
+    echo('Пользователя не существует.');
+    redirect('/login');
+  }
   if user['password'] == password {
     session('login', login);
   }
@@ -61,12 +65,16 @@ if logged () {
           </table>
         </form>
         <p>[ <a href="/register">Регистрация</a> ]
-          <br>[ <a href="index.php?action=forgot">Забыл пароль?</a> ]
+          
         </p>
         <table width="735" border="0" cellspacing="0" cellpadding="0" align="left">
           <tr>
             <td align="left" valign="top">
-              <p>Пользователи: 347,323</p>
+              <?
+              Let users = sql.execute('SELECT COUNT(*) as count from users;');
+              users = sql.fetchall();
+              ?>
+              <p>Пользователи: <?=users[0]['count']?></p>
               <p>Новый язык программирования N способен на многое. Из NLang можно вызывать любые функции Python и писать модули на нём.</p>
             </td>
           </tr>
@@ -76,4 +84,4 @@ if logged () {
   </table>
 </td>
           
-<? //include('include/footer.n'); ?>
+<? include('include/footer.n'); ?>

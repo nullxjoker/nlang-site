@@ -4,8 +4,8 @@ pyimport('MySQLdb');
 pyimport('MySQLdb', ['cursors']);
 
 Python conn = MySQLdb.connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, cursorclass=MySQLdb.cursors.DictCursor);
-Python sql = conn.cursor();
 
+Python sql = conn.cursor();
 sql.execute('SET names "utf8"');
 Boolean logged () {
   return (session('login') != None);
